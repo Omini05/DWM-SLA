@@ -1,55 +1,51 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* File 2: style.css */
+:root{
+--bg: #fafafa;
+--card: #ffffff;
+--muted: #6b7280;
+--accent: #0ea5a4;
+--text: #0f172a;
+--border: #e6e9ee;
+--maxw: 900px;
+--radius: 12px;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
-    background-color: #f9f9f9;
-    color: #333;
-    padding: 0 15px;
+
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+background:linear-gradient(180deg,var(--bg),#f3f6f9 60%);
+color:var(--text);
+padding:40px 20px;
+display:flex;
+justify-content:center;
+align-items:flex-start;
 }
 
-header {
-    background-color: #0d6efd;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
+
+.container{
+width:100%;
+max-width:var(--maxw);
+background:var(--card);
+border-radius:var(--radius);
+box-shadow:0 6px 30px rgba(15,23,42,0.08);
+border:1px solid var(--border);
+padding:34px;
 }
 
-header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
 
-main {
-    max-width: 900px;
-    margin: 20px auto;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    color: #0d6efd;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #0d6efd;
-    padding-bottom: 5px;
-}
-
-ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    margin-top: 40px;
-}
+header{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.avatar{width:64px;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--accent),#60a5fa);color:white;font-weight:700;font-size:18px;box-shadow:0 4px 18px rgba(14,165,164,0.18)}
+h1{font-size:20px;margin:0}
+.byline{color:var(--muted);font-size:13px;margin-top:4px}
+.divider{height:1px;background:var(--border);margin:20px 0;border-radius:6px}
+article{line-height:1.7;color:#102038}
+h2{font-size:16px;margin:20px 0 10px}
+h3{font-size:14px;margin:14px 0}
+p{margin:10px 0}
+ul{margin:8px 0 14px 20px}
+li{margin:6px 0}
+footer{margin-top:22px;color:var(--muted);font-size:13px}
+.section-note{background:#f8fafc;border:1px solid var(--border);padding:12px;border-radius:8px;margin:12px 0}
+@media (max-width:560px){.container{padding:20px}.avatar{width:56px;height:56px;font-size:16px}}
